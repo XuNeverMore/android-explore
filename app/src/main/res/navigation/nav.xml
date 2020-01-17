@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/itemFragment">
+
+    <fragment
+        android:id="@+id/itemFragment"
+        android:name="com.nevermore.ui.ItemFragment"
+        android:label="fragment_item_list"
+        tools:layout="@layout/fragment_item_list" >
+        <action
+            android:id="@+id/action_itemFragment_to_bitmapFragment"
+            app:destination="@id/bitmapFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/bitmapFragment"
+        android:name="com.nevermore.ui.BitmapFragment"
+        android:label="fragment_bitmap"
+        tools:layout="@layout/fragment_bitmap" />
+</navigation>
